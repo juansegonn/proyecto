@@ -1,0 +1,35 @@
+.btn__repro {
+  color: #638a31;
+  background: white;
+  border-radius: 10px;
+  border: 2px solid #638a31;
+  display: inline-block;
+  padding: 20px 35px;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 12px;
+}
+
+.btn__repro:hover {
+  color: white;
+  background: #638a31;
+  border: 3px solid white;
+}
+
+.btn__enviar {
+  color: white;
+  background: #638a31;
+  border-radius: 10px;
+  border: 2px solid white;
+  display: inline-block;
+  padding: 20px 35px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn__enviar:hover {
+  color: #638a31;
+  background: white;
+  border: 3px solid #638a31;
+}
+/*# sourceMappingURL=styles.css.map */

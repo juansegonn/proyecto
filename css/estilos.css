@@ -272,10 +272,10 @@ header{
 
 
 :root{
-    --image1:url(imagenes/galeria/a-marijuana-bud-is-seen-at-a-medical-marijuana-facility-in-unity-maine.jpg);
-    --image2:url(imagenes/galeria/super-ak.jpg);
-    --image3:url(imagenes/galeria/medicinal.jpg);
-    --image4:url(imagenes/galeria/www.usnews.com.jpg);
+    --image1:url(/imagenes/galeria/a-marijuana-bud-is-seen-at-a-medical-marijuana-facility-in-unity-maine.jpg);
+    --image2:url(/imagenes/galeria/super-ak.jpg);
+    --image3:url(/imagenes/galeria/medicinal.jpg);
+    --image4:url(/imagenes/galeria/www.usnews.com.jpg);
 }
 
 .galeria{

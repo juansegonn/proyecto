@@ -1,0 +1,36 @@
+
+
+
+@mixin btn ($col, $bg, $brc){
+    color: $col; 
+    background: $bg;
+    border-radius: 10px;
+    border: 2px solid $brc;
+    display: inline-block;
+    padding: 20px 35px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn__repro{
+    @include btn (#638a31, white, #638a31)
+    {
+        margin-left: 12px;
+    }
+}
+
+.btn__repro:hover{
+    color: white;
+    background: #638a31;
+    border: 3px solid white;
+}
+
+.btn__enviar{
+    @include btn (white, #638a31, white)
+}
+
+.btn__enviar:hover{
+    color: #638a31;
+    background: white;
+    border: 3px solid #638a31;
+}
