@@ -325,3 +325,71 @@ header{
 
 /* Footer */
 
+.footer{
+    background-color: #222;
+    margin-top: 100px;
+}
+
+.footer__title{
+    margin-top: 40px;
+    color: rgb(182, 179, 179);
+}
+
+.footer__contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    place-items: center;
+    margin-bottom: 30px;
+}
+
+.footer__copy{
+    margin: 20px 0;
+    font-weight: 300;
+    color: rgb(182, 179, 179);
+}
+
+.footer__social{
+    display: flex;
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+
+.footer__link{
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgb(182, 179, 179);
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(182, 179, 179);
+}
+
+.footer__icon{
+    width: 30px;
+}
+
+
+.footer__picture{
+    margin: 0;
+}
+
+.footer__img{
+    width: 30%;
+    margin-left: 50%;
+}
+
+.footer__copyright{
+    padding: 20px;
+    border-top: 2px solid #918484;
+    text-align: center;
+    color: rgb(182, 179, 179);
+}
+
+.footer__copyright::after{
+    content: " juansegonn@gmail.com";
+    color: rgb(182, 179, 179);
+}
