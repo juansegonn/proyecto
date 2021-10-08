@@ -30,11 +30,14 @@ header{
 .nav-menu ul{
     display: flex;
     align-items: center;
+    margin-bottom: 0;
 }
 .nav-menu li{
     margin-right: 1.5rem;
 }
 .nav-menu li a{
+    text-decoration: none;
+    list-style: none;
     background-color: #222;
     color: honeydew;
     padding: 10px 15px;
