@@ -13,7 +13,7 @@
 .btn__repro:hover {
   color: white;
   background: #638a31;
-  border: 3px solid white;
+  border: 2px solid white;
 }
 
 .btn__enviar {
@@ -30,6 +30,6 @@
 .btn__enviar:hover {
   color: #638a31;
   background: white;
-  border: 3px solid #638a31;
+  border: 2px solid #638a31;
 }
 /*# sourceMappingURL=styles.css.map */
