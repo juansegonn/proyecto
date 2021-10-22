@@ -167,7 +167,6 @@ header{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    /* align-items: center; */
 }
 
 .repro__title{
@@ -460,3 +459,85 @@ header{
     height: 60px;
     width: auto;  
 }
+
+/* Responsive ------------------------------------------------------------------------------------------------------- */ 
+
+@media screen and (max-width:500px){
+    
+/* header ---------------------------------------------------------------------------------------------------------*/
+
+    header{
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo-header{
+        display: block;
+        margin: 2rem;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    .logo-header img{
+        height: 9rem;
+        width: auto;
+        margin-left: 2rem;
+    }
+
+    .nav-menu ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-menu li{
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 0;
+}
+
+/* index ------------------------------------------------------------------------------------------- */
+
+    .title{
+        align-items: center;
+    }
+    
+    .title::after{
+        content: none;
+    }
+
+/* tarjetas------------------------------------------------------------------- */
+
+    .card__container{
+        width: 90%;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(6,1fr);
+        grid-template-areas: 
+        "card1"
+        "card1"
+        "card2"
+        "card2"
+        "card3"
+        "card3"; 
+    }
+/* repro --------------------------------------------------------------------------------------------------------- */
+
+    .repro__container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding: 0px;
+    }
+
+    .repro__picture{
+        display: none;
+    }
+
+    .repro__about{
+        width: 80 vh;
+        height: 80 vh;
+        padding: 50px;
+
+/* semillas --------------------------------------------------------------------------------------------------- */
