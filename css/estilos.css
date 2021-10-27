@@ -431,6 +431,11 @@ header{
     font-weight: 10;
 }
 
+.guia__links{
+    display: flex;
+    margin: 0;
+}
+
 .guia__btn{
     display: flex;
     margin-left: 90px;
@@ -574,9 +579,40 @@ header{
         margin: 2rem;
         align-items: center;
     }
+
     .caja{
         align-items: center;
         width: 100vh;
     }
 
+    /* Guia ------------------------------------------------------------------------------------------------------------ */ 
+    .guia__container{
+        margin: 0;
+    }
+
+    .guia__subtitle{
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .guia__paragraph{
+        margin: 1rem;
+    }
+
+    .guia__repro{
+        margin: 0 0 0 60px;
+    }
+
+    .btn__container{
+        margin: 0;
+    }
+
+    .guia__links{
+        align-items: center;
+        margin: 0 0 0 -75px;
+    }
+
+    .btn{
+        height: 40px;
+    }
 }
