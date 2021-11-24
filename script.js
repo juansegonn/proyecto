@@ -62,6 +62,7 @@ consulta()
 //muestra array en consola
 console.log(semillas)
 
+//agregado de geneticas a la seccion semillas 
 let div__geneticas = document.getElementById('div__geneticas')
 
 semillas.forEach((genetica, indice) => {
