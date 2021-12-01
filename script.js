@@ -31,35 +31,6 @@ const genetica13 = new Genetica ("chocolate bubba", "25%", "40%", "60%", "9 week
 //push de geneticas al array
 semillas.push(genetica1, genetica2, genetica3, genetica4, genetica5, genetica6, genetica7, genetica8, genetica9, genetica10, genetica11, genetica12, genetica13) 
 
-
-
-/*
-//agregar una genetica
-function agregarGenetica(){
-    let nombreNuevo = prompt("Ingrese el nombre de la genetica")
-    let porcTHCnuevo = prompt("Indique la cantidad de thc que contiene")
-    let porcINDnuevo = prompt("Indique que porcentaje de indica es la genetica")
-    let porcSATnuevo = prompt("Indique que porcentaje de sativa es la genetica")
-    let floweringNuevo = prompt("Señale en cuantas semanas florece")
-    const geneticaNueva = new Genetica (nombreNuevo, porcTHCnuevo, porcINDnuevo, porcSATnuevo, floweringNuevo)
-    semillas.push(geneticaNueva) 
-}
-
-//pregunta para agregar genetica
-function consulta(){
-    let pregunta = prompt ("¿Deseas cargar una nueva genetica? (si/no)")
-    if(pregunta.toLocaleLowerCase()=="si"){
-        agregarGenetica()
-        consulta()
-    }else{
-        alert("La lista de geneticas se encuentra en la consola")
-    }
-}
-consulta()
-*/
-
-
-
 //muestra array en consola
 console.log(semillas)
 
@@ -69,26 +40,73 @@ let div__geneticas = document.getElementById('div__geneticas')
 semillas.forEach((genetica, indice) => {
     div__geneticas.innerHTML += `
     <div class="caja" id="genetica${indice + 1}"> 
-        <button id="boton"><img class="foto" src="imagenes/semillas/genetica${indice + 1}.png" alt="${genetica.nombre}"></button>
+        <button id="boton${indice + 1}"><img class="foto" src="imagenes/semillas/genetica${indice + 1}.png" alt="${genetica.nombre}"></button>
         <p class="none">${genetica.precio}</p>
     </div>
     `
 })
 
 // carrito de semillas 
-let total = 0
 let carrito = []
 
-function suma(){
-    genetica.precio + total
-}
+let carrito__container = document.getElementById('carrito__container')
+semillas.forEach((genetica, indice) => {
+    let btnagregar = document.getElementById(`boton${indice + 1}`)
 
-function agregadoCarrito(){
-    carrito.push ()
-}
+    btnagregar.addEventListener('click', (e) => {
+    e.preventDefault()
+    carrito.push(genetica)
+    console.log (carrito)
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+    })
+})
 
-const eventoMultiple = document.getElementById('boton')
-eventoMultiple.addEventListener('click', suma, agregadoCarrito)
+//ventana carrito
+let cerrar = document.querySelectorAll(".close")[0]
+let abrir = document.querySelectorAll(".carrito__boton")[0]
+let carritoAbrir = document.querySelectorAll(".carrito")[0]
+let carritoCerrar = document.querySelectorAll(".carrito__container")[0]
 
-console.log(total)
-console.log(carrito)
+abrir.addEventListener("click", function(e){
+    e.preventDefault();
+    carritoCerrar.style.opacity = "1"
+    carritoCerrar.style.visibility = "visible"
+    carritoAbrir.classList.toggle("carrito__close")
+})
+
+cerrar.addEventListener("click", function(){
+    carritoAbrir.classList.toggle("carrito__close")
+    setTimeout(function(){
+        carritoCerrar.style.opacity = "0"
+        carritoCerrar.style.visibility = "hidden"
+    },850)
+})
+
+window.addEventListener("click", function(e){
+    console.log(e.target)
+    if(e.target == carritoCerrar){
+        carritoAbrir.classList.toggle("carrito__close")
+
+        setTimeout(function(){
+            carritoCerrar.style.opacity = "0"
+            carritoCerrar.style.visibility = "hidden"
+        },850)
+    }
+})
+
+//agregado de geneticas al carrito
+let carrito__geneticas = document.getElementById('carrito__geneticas')
+
+document.getElementById('carrito__boton').addEventListener('click', () => {
+    let geneticasCarrito = JSON.parse(localStorage.getItem('carrito'))
+
+    geneticasCarrito.forEach((genetica, indice) => {
+        carrito__geneticas += `
+        <div class="carrito__div" id="genetica${indice + 1}">
+            <p class="genetica__nombre">${genetica.nombre}</p>
+            <p class="genetica__precio">${genetica.precio}</p>
+            <button type="button" id="boton${indice + 1}"> x
+        </div>
+        `
+    })
+})

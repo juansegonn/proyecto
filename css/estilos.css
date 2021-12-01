@@ -9,6 +9,7 @@
 }
 
 /* header ---------------------------------------------------------------------------------------------------------*/
+
 .enlace{
     color: black;
 }
@@ -87,7 +88,6 @@ header{
 }
 
 /* tarjetas------------------------------------------------------------------- */
-
 
 .card{
     position: relative;
@@ -214,7 +214,6 @@ header{
 
 /* botones --------------------------------------------------------------------------------------------------- */
 
-
 .cta{
     color: #638a31; 
     background: white;
@@ -251,7 +250,6 @@ header{
 
 /* semillas --------------------------------------------------------------------------------------------------- */
 
-
 .flex__container{
     display: flex;
     margin: 50px 50px 50px 50px;
@@ -270,8 +268,69 @@ header{
     height: 450px;
 }
 
-/* galeria ------------------------------------------------------------------------------------------------------- */
+/* carrito ------------------------------------------------------------------------------------------------------- */
 
+.carrito__container{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carrito{
+    width: 40%;
+    height: 50%;
+    background: #638a31;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%);
+    border-radius: 10px;
+}
+.close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: black;
+    color: #638a31;
+    line-height: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.carrito__close{
+    transform: translateY(-200%);
+}
+.carrito__boton{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #638a31;
+    color: black;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, .3);
+    z-index: 100;
+}
+
+/* galeria ------------------------------------------------------------------------------------------------------- */
 
 .galeria{
     width: 90%;
