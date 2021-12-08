@@ -61,7 +61,7 @@ semillas.forEach((genetica, indice) => {
     })
 })
 
-//ventana carrito
+//animacion de la ventana del carrito
 let cerrar = document.querySelectorAll(".close")[0]
 let abrir = document.querySelectorAll(".carrito__boton")[0]
 let carritoAbrir = document.querySelectorAll(".carrito")[0]
