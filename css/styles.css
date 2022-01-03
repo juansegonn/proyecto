@@ -32,4 +32,24 @@
   background: white;
   border: 2px solid #638a31;
 }
-/*# sourceMappingURL=styles.css.map */
+
+.btn__carrito{
+  color: #638a31;
+  background: white;
+  border-radius: 10px;
+  border: 2px solid #638a31;
+  display: inline-block;
+  padding: 20px 35px;
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+
+}
+
+.btn__carrito:hover {
+  color: white;
+  background: #638a31;
+  border: 2px solid white;
+}
