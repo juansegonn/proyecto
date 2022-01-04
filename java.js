@@ -32,12 +32,13 @@ fetch('geneticas.json')
 carrito__boton.addEventListener('click', () => {
     let productosDelStorage = JSON.parse(localStorage.getItem('carrito'))
 
-    productosDelStorage.forEach(productoCarrito, indice)
-    carrito.innerHTML += `
-         <div id="producto__carrito${indice}">
-            <p>${productoCarrito.nombre}</p>
-            <p>${productoCarrito.precio}</p>
-            <p>${productoCarrito.cant}</p>
+    productosDelStorage.forEach((productoCarrito, indice) => {
+        carrito.innerHTML += `
+        <div class="producto__carrito" id="producto__carrito${indice}">
+            <p class="nombre__carrito">${productoCarrito.nombre}</p>
+            <p class="precio__carrito">$${new Intl.NumberFormat("de-DE").format(productoCarrito.precio)}</p>
+            <p class="cant__carrito">cantidad:${productoCarrito.cant}</p>
         </div>
-    `
+        `
+    })
 })
